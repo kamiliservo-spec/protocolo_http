@@ -1,0 +1,7 @@
+{
+    "git.autofetch": true,
+    "git.enableSmartCommit": false,
+    "git.confirmSync": true,
+    "scm.alwaysShowRepositories": true,
+    "scm.defaultViewMode": "tree"
+}

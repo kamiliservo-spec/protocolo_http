@@ -63,6 +63,28 @@ compilação com `g++`, vinculação de `ws2_32` e `winhttp`, além da depuraç�
 - Se o MinGW estiver em outro local, ajuste `compilerPath`, `command` e `miDebuggerPath`
   nos arquivos dentro de `.vscode`.
 
+### Commit e publicação pelo VS Code
+
+O repositório já está conectado ao GitHub pelo remoto `origin`. Para usar o controle
+de versão diretamente no VS Code:
+
+1. Instale o **Git for Windows** e a extensão integrada **GitHub Authentication**.
+2. No VS Code, abra **Accounts** (ícone de pessoa) e selecione **Sign in with GitHub**.
+3. Abra **Source Control** (`Ctrl+Shift+G`), revise os arquivos, informe a mensagem e
+   clique em **Commit**.
+4. Clique em **Sync Changes** ou **Publish Branch** para enviar o commit ao GitHub.
+
+Na primeira utilização, configure sua identidade Git no terminal do VS Code, substituindo
+os valores pelos seus dados:
+
+```powershell
+git config --global user.name "Seu nome"
+git config --global user.email "seu-email-do-github@example.com"
+```
+
+O VS Code solicitará a autenticação do GitHub quando fizer o primeiro push. Não coloque
+tokens ou senhas no repositório.
+
 ## Observações
 
 - Os testes 1, 2 e 4 acessam a internet (`example.com`), portanto dependem de rede liberada e,
