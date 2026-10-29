@@ -35,9 +35,8 @@ rede_edu.hpp                 Cabeçalho com as funções de rede
 ## Requisitos
 
 - Windows 10/11
-- Visual Studio 2022 (Community ou superior) com a carga de trabalho **Desenvolvimento para desktop com C++**
-- SDK do Windows 10 ou 11
-- Toolset MSVC compatível com C++23 (`/std:c++23preview` ou `/std:c++latest`)
+- **Visual Studio 2022** (Community ou superior) com a carga de trabalho **Desenvolvimento para desktop com C++**, SDK do Windows 10/11 e toolset MSVC compatível com C++23 (`/std:c++23preview` ou `/std:c++latest`); ou
+- **Visual Studio Code** com a extensão **C/C++** da Microsoft e **MinGW-w64/GCC 14 ou superior** configurado no PATH. O projeto foi configurado para usar o MinGW instalado via Scoop em `%USERPROFILE%\scoop\apps\mingw\current\bin`.
 
 ## Como compilar e executar
 
@@ -53,6 +52,16 @@ Pela linha de comando, com o MSVC já configurado:
 ```powershell
 cl /std:c++latest /EHsc /W3 /Fe:protocolo_http.exe protocolo_http.cpp
 ```
+
+### Visual Studio Code com MinGW
+
+Abra a pasta do projeto no VS Code. As configurações em `.vscode` já definem C++23,
+compilação com `g++`, vinculação de `ws2_32` e `winhttp`, além da depuração com GDB.
+
+- `Ctrl+Shift+B` compila o projeto.
+- `F5` compila e inicia a depuração.
+- Se o MinGW estiver em outro local, ajuste `compilerPath`, `command` e `miDebuggerPath`
+  nos arquivos dentro de `.vscode`.
 
 ## Observações
 

@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "name": "MinGW C++23",
+            "compilerPath": "${env:USERPROFILE}\\scoop\\apps\\mingw\\current\\bin\\g++.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++23",
+            "intelliSenseMode": "windows-gcc-x64",
+            "defines": [
+                "WIN32_LEAN_AND_MEAN"
+            ],
+            "includePath": [
+                "${workspaceFolder}/**"
+            ]
+        }
+    ],
+    "version": 4
+}
